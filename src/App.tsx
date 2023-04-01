@@ -1,30 +1,24 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-
+import { ThemeProvider } from 'styled-components';
+import themes from './themes/schema.json';
+import { GlobalStyles } from './themes/globalStyles';
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [theme, setTheme] = useState(themes.light);
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <h1>Welcome Home</h1>
+      <button
+        onClick={() => {
+          if (theme.name === 'light') {
+            setTheme(themes.dark);
+          } else {
+            setTheme(themes.light);
+          }
+        }}>
+        Theme
+      </button>
+    </ThemeProvider>
   );
 }
 

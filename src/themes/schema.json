@@ -1,0 +1,36 @@
+{
+    "light": {
+        "name": "light",
+        "colors": {
+            "primary": "white",
+            "secondary": "black",
+            "tertiary": "#3077FF",
+            "primaryHover": "#ededed",
+            "secondaryHover": "#262626",
+            "tertiaryHover": "#5992ff",
+            "primaryTransparent": "rgba(255,255,255,0.8)",
+            "secondaryTransparent": "rgba(0,0,0,0.8)",
+            "tertiaryTransparent": "rgba(48, 119, 255,0.8)",
+            "primarySub": "#F8F8F8",
+            "secondarySub": "#949494",
+            "tertiarySub": "#E2ECFF"
+        }
+    },
+    "dark": {
+        "name": "dark",
+        "colors": {
+            "primary": "black",
+            "secondary": "white",
+            "tertiary": "#3077FF",
+            "primaryHover": "#262626",
+            "secondaryHover": "#ededed",
+            "tertiaryHover": "#5992ff",
+            "primaryTransparent": "rgba(0,0,0,0.8)",
+            "secondaryTransparent": "rgba(255,255,255,0.8)",
+            "tertiaryTransparent": "rgba(48, 119, 255,0.8)",
+            "primarySub": "#262626",
+            "secondarySub": "#F8F8F8",
+            "tertiarySub": "#001744"
+        }
+    }
+}

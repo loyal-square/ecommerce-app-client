@@ -16,7 +16,7 @@ function App() {
             setTheme(themes.light);
           }
         }}>
-        Theme
+        Theme Button
       </button>
     </ThemeProvider>
   );

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { signIn } from '../helpers/amplifyHelpers';
+import { signIn, signOut } from '../helpers/amplifyHelpers';
 
 const Login: FC = () => {
   const [email, setEmail] = useState('');
@@ -25,6 +25,12 @@ const Login: FC = () => {
           signIn(email, password);
         }}>
         Sign In
+      </button>
+      <button
+        onClick={() => {
+          signOut();
+        }}>
+        Sign Out
       </button>
     </div>
   );

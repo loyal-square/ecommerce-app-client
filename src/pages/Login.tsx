@@ -1,11 +1,16 @@
 import React, { FC, useState } from 'react';
 import { signIn, signOut } from '../helpers/amplifyHelpers';
+import Auth, { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 
 const Login: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
     <div>
+      <button
+        onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}>
+        Open Google
+      </button>
       <input
         type="text"
         placeholder="email"

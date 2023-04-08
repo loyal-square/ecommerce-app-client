@@ -1,5 +1,4 @@
 import AWS from 'aws-sdk';
-import { Buffer } from 'buffer';
 // Set up AWS credentials and region
 AWS.config.update({
   accessKeyId: import.meta.env.VITE_AWS_ACCESS_KEY_ID,

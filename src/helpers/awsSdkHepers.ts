@@ -42,7 +42,7 @@ export async function getImageFromS3() {
         console.log(err, err.stack);
       } else {
         console.log(data);
-        base64String = 'data:image/jpeg;base64,' + Buffer.from(data.Body as any).toString('base64');
+        base64String = 'data:image/jpeg;base64,' + arrayBufferToBase64(data.Body);
         // data contains the image data as a Buffer object
       }
     })
@@ -51,3 +51,13 @@ export async function getImageFromS3() {
 
   return base64String;
 }
+
+const arrayBufferToBase64 = (buffer: any) => {
+  let binary = '';
+  const bytes = new Uint8Array(buffer);
+  const len = bytes.byteLength;
+  for (let i = 0; i < len; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return window.btoa(binary);
+};

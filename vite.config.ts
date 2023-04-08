@@ -11,9 +11,4 @@ export default defineConfig({
       './runtimeConfig': './runtimeConfig.browser'
     }
   },
-  build: {
-    rollupOptions: {
-      plugins: [inject({ Buffer: ['buffer', 'Buffer'] })]
-    }
-  }
 });

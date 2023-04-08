@@ -25,7 +25,8 @@ const Register: FC = () => {
       <button
         onClick={() => {
           signUp(email, password);
-        }}>
+        }}
+      >
         Sign In
       </button>
       <input
@@ -45,7 +46,8 @@ const Register: FC = () => {
       <button
         onClick={() => {
           confirmSignUp(email, code);
-        }}>
+        }}
+      >
         Verify
       </button>
     </div>

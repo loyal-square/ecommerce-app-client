@@ -8,7 +8,8 @@ const Login: FC = () => {
   return (
     <div>
       <button
-        onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}>
+        onClick={() => Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google })}
+      >
         Open Google
       </button>
       <input
@@ -28,13 +29,15 @@ const Login: FC = () => {
       <button
         onClick={() => {
           signIn(email, password);
-        }}>
+        }}
+      >
         Sign In
       </button>
       <button
         onClick={() => {
           signOut();
-        }}>
+        }}
+      >
         Sign Out
       </button>
     </div>
